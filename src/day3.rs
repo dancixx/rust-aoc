@@ -56,7 +56,7 @@ pub fn run_own() {
     let lines = input.split("\n").collect::<Vec<&str>>();
     let mut grid_lines = vec![];
 
-    for n in (0..=lines.len() - 1).step_by(3) {
+    for n in (0..lines.len()).step_by(3) {
         grid_lines.push(vec![lines[n], lines[n + 1], lines[n + 2]]);
     }
 
