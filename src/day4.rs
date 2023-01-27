@@ -2,18 +2,13 @@ use itertools::Itertools;
 
 pub fn run_own() {
     let input = std::fs::read_to_string("src/datas/day4_input.txt").unwrap();
-    let lines = input.split("\n").collect::<Vec<&str>>();
-    let lines = lines
-        .iter()
+    let lines = input
+        .split("\n")
         .map(|s| s.split(",").collect::<Vec<&str>>())
-        .collect::<Vec<Vec<&str>>>();
-    let lines = lines
-        .iter()
         .map(|s| {
             s.iter()
                 .map(|s| {
                     s.split("-")
-                        .into_iter()
                         // TODO: map is faster than flat_map
                         .map(|s| s.parse::<usize>().unwrap())
                         // .flat_map(str::parse::<usize>)
