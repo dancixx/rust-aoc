@@ -3,6 +3,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn main() {
     // Day 1
@@ -31,5 +32,10 @@ fn main() {
     // Day 5
     let start = std::time::Instant::now();
     day5::run_own();
+    println!("Time: {:?}", start.elapsed());
+
+    // Day 6
+    let start = std::time::Instant::now();
+    day6::run();
     println!("Time: {:?}", start.elapsed());
 }
